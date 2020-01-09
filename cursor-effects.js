@@ -1,3 +1,4 @@
+// Ref: https://github.com/DIYgod/diygod.me/blob/master/themes/sagiri/src/cursor-effects.js
 class Circle {
   constructor({ origin, speed, color, angle, context }) {
     this.origin = origin
