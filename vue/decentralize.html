@@ -15,7 +15,7 @@
   <script src="https://hm.baidu.com/hm.js?f1661a9d96dfacbfa0cd47b35701e6d9"></script>
   <script src="/Blog/cursor-effects.js"></script>
     
-    <link rel="preload" href="/Blog/assets/css/0.styles.47ab71d1.css" as="style"><link rel="preload" href="/Blog/assets/js/app.bcbbf837.js" as="script"><link rel="preload" href="/Blog/assets/js/2.1b6f798d.js" as="script"><link rel="preload" href="/Blog/assets/js/16.aa9f68c6.js" as="script"><link rel="preload" href="/Blog/assets/js/4.43f7c5d6.js" as="script"><link rel="preload" href="/Blog/assets/js/3.426547e3.js" as="script"><link rel="prefetch" href="/Blog/assets/js/10.1acc9a00.js"><link rel="prefetch" href="/Blog/assets/js/11.f6994451.js"><link rel="prefetch" href="/Blog/assets/js/12.25b2492f.js"><link rel="prefetch" href="/Blog/assets/js/13.01be3051.js"><link rel="prefetch" href="/Blog/assets/js/14.30e343ac.js"><link rel="prefetch" href="/Blog/assets/js/15.a9e7bc77.js"><link rel="prefetch" href="/Blog/assets/js/17.2a857fd7.js"><link rel="prefetch" href="/Blog/assets/js/18.ea9fbe83.js"><link rel="prefetch" href="/Blog/assets/js/19.e8ab352b.js"><link rel="prefetch" href="/Blog/assets/js/20.15fabbc4.js"><link rel="prefetch" href="/Blog/assets/js/5.e062bb1d.js"><link rel="prefetch" href="/Blog/assets/js/6.72004c4d.js"><link rel="prefetch" href="/Blog/assets/js/7.e758febe.js"><link rel="prefetch" href="/Blog/assets/js/8.caefbb1c.js"><link rel="prefetch" href="/Blog/assets/js/9.780eeaca.js">
+    <link rel="preload" href="/Blog/assets/css/0.styles.47ab71d1.css" as="style"><link rel="preload" href="/Blog/assets/js/app.f96978b6.js" as="script"><link rel="preload" href="/Blog/assets/js/2.1b6f798d.js" as="script"><link rel="preload" href="/Blog/assets/js/16.2e1270f6.js" as="script"><link rel="preload" href="/Blog/assets/js/4.43f7c5d6.js" as="script"><link rel="preload" href="/Blog/assets/js/3.426547e3.js" as="script"><link rel="prefetch" href="/Blog/assets/js/10.1acc9a00.js"><link rel="prefetch" href="/Blog/assets/js/11.f6994451.js"><link rel="prefetch" href="/Blog/assets/js/12.25b2492f.js"><link rel="prefetch" href="/Blog/assets/js/13.01be3051.js"><link rel="prefetch" href="/Blog/assets/js/14.30e343ac.js"><link rel="prefetch" href="/Blog/assets/js/15.a9e7bc77.js"><link rel="prefetch" href="/Blog/assets/js/17.7ac98a76.js"><link rel="prefetch" href="/Blog/assets/js/18.ea9fbe83.js"><link rel="prefetch" href="/Blog/assets/js/19.79da8f22.js"><link rel="prefetch" href="/Blog/assets/js/20.15fabbc4.js"><link rel="prefetch" href="/Blog/assets/js/5.e062bb1d.js"><link rel="prefetch" href="/Blog/assets/js/6.72004c4d.js"><link rel="prefetch" href="/Blog/assets/js/7.e758febe.js"><link rel="prefetch" href="/Blog/assets/js/8.caefbb1c.js"><link rel="prefetch" href="/Blog/assets/js/9.780eeaca.js">
     <link rel="stylesheet" href="/Blog/assets/css/0.styles.47ab71d1.css">
   </head>
   <body>
@@ -97,59 +97,52 @@ tree -I node_modules -L 4
 </code></pre></div><h2 id="router"><a href="#router" aria-hidden="true" class="header-anchor">#</a> router</h2> <p>每个模块对应的 路由配置文件 <code>router.js</code> (包含路由和菜单配置),如果是菜单就加一个 <code>isMenu</code> 为true</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// views/content-operation/router.js</span>
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
   path<span class="token punctuation">:</span> <span class="token string">'/content-operation'</span><span class="token punctuation">,</span>
-  component<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token punctuation">(</span>
-        <span class="token operator">&lt;</span>xdf<span class="token operator">-</span>catch <span class="token operator">/</span><span class="token operator">&gt;</span>
-      <span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./components/view-catch.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
   meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     keepAlive<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     isMenu<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     sort<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-    title<span class="token punctuation">:</span> <span class="token string">'内容运营'</span><span class="token punctuation">,</span>
+    title<span class="token punctuation">:</span> <span class="token string">'安达市'</span><span class="token punctuation">,</span>
     icon<span class="token punctuation">:</span> <span class="token string">'el-icon-menu'</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
-      path<span class="token punctuation">:</span> <span class="token string">'course-adjustment'</span><span class="token punctuation">,</span>
-      <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./src/course-adjustment/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      path<span class="token punctuation">:</span> <span class="token string">'asdfsdf'</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./src/asdfsdf/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
       meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         keepAlive<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
         isMenu<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        title<span class="token punctuation">:</span> <span class="token string">'课程组配置'</span>
+        title<span class="token punctuation">:</span> <span class="token string">'阿斯蒂芬'</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span>
-      path<span class="token punctuation">:</span> <span class="token string">'course-detail'</span><span class="token punctuation">,</span>
-      <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./src/course-adjustment/detail.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      path<span class="token punctuation">:</span> <span class="token string">'sdfsd'</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./src/asdfsdf/detail.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
       meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         keepAlive<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
         isMenu<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-        title<span class="token punctuation">:</span> <span class="token string">'课程调权'</span>
+        title<span class="token punctuation">:</span> <span class="token string">'阿斯蒂芬'</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span>
-      path<span class="token punctuation">:</span> <span class="token string">'faq-config'</span><span class="token punctuation">,</span>
-      <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./src/faq-config/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      path<span class="token punctuation">:</span> <span class="token string">'gfdfss'</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./src/gfdfss/index.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
       meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         keepAlive<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
         isMenu<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        title<span class="token punctuation">:</span> <span class="token string">'常见问题'</span>
+        title<span class="token punctuation">:</span> <span class="token string">'搜索'</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span>
       path<span class="token punctuation">:</span> <span class="token string">'faq-detail/:type/:id'</span><span class="token punctuation">,</span>
-      <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./src/faq-config/detail.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./src/gfdfss/detail.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
       meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         keepAlive<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
         isMenu<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-        title<span class="token punctuation">:</span> <span class="token string">'常见问题配置'</span>
+        title<span class="token punctuation">:</span> <span class="token string">'啥地方法规'</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  redirect<span class="token punctuation">:</span> <span class="token string">'/content-operation/course-adjustment'</span>
 <span class="token punctuation">}</span>
 
 </code></pre></div><h2 id="路由汇总"><a href="#路由汇总" aria-hidden="true" class="header-anchor">#</a> 路由汇总</h2> <p>最后在一个汇总文件里通过 <code>require.context</code> 来获取每个模块下面的 <code>router.js</code> 来进行路由配置汇总，最终生成的 路由(和菜单)配置 和 集中化 配置的路由一样</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// src/router/router.config.js</span>
@@ -186,7 +179,7 @@ tree -I node_modules -L 4
 <span class="token keyword">export</span> <span class="token punctuation">{</span>
   menus
 <span class="token punctuation">}</span>
-</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/LeeRayno/Blog/edit/master/docs/vue/decentralize.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">4/5/2020, 3:00:01 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/LeeRayno/Blog/edit/master/docs/vue/decentralize.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/11/2020, 3:55:00 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
         ←
         <a href="/Blog/vue/menu.html" class="prev">
           Menu
@@ -198,6 +191,6 @@ tree -I node_modules -L 4
   MIT Licensed | Copyright © 2019 - 2020 LeeRayno   
   👀: <span id="busuanzi_value_site_pv"></span>   
   👣: <span id="busuanzi_value_site_uv"></span></footer><!----></div></div>
-    <script src="/Blog/assets/js/app.bcbbf837.js" defer></script><script src="/Blog/assets/js/2.1b6f798d.js" defer></script><script src="/Blog/assets/js/16.aa9f68c6.js" defer></script><script src="/Blog/assets/js/4.43f7c5d6.js" defer></script><script src="/Blog/assets/js/3.426547e3.js" defer></script>
+    <script src="/Blog/assets/js/app.f96978b6.js" defer></script><script src="/Blog/assets/js/2.1b6f798d.js" defer></script><script src="/Blog/assets/js/16.2e1270f6.js" defer></script><script src="/Blog/assets/js/4.43f7c5d6.js" defer></script><script src="/Blog/assets/js/3.426547e3.js" defer></script>
   </body>
 </html>
